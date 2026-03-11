@@ -1,0 +1,22 @@
+.ai-risk-badge {
+    display: inline-block;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-right: 6px;
+    font-weight: 1000;
+    color: #fff;
+    vertical-align: middle;
+}
+
+.ai-risk-badge.safe {
+    background-color: #22c55e;
+}
+
+.ai-risk-badge.suspicious {
+    background-color: #eab308;
+}
+
+.ai-risk-badge.high-risk {
+    background-color: #ef4444;
+}

@@ -1,0 +1,47 @@
+{
+    "manifest_version": 3,
+    "name": "AI Email Privacy Shield",
+    "version": "1.0",
+    "description": "Protecting your inbox by scanning for threats and suspicious links.",
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "storage"
+    ],
+    "host_permissions": [
+        "https://mail.google.com/*",
+        "https://safebrowsing.googleapis.com/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://mail.google.com/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "css": [
+                "content.css"
+            ]
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_title": "AI Email Privacy Shield",
+        "default_popup": "index.html?view=popup"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "index.html",
+                "assets/*",
+                "data/*"
+            ],
+            "matches": [
+                "https://mail.google.com/*"
+            ]
+        }
+    ]
+}
