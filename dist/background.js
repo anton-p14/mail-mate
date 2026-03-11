@@ -1,10 +1,8 @@
 // Background service worker for AI Email Privacy Shield
-
+importScripts("config.js");
 // Securely store API keys here. Ensure this file is excluded from public source control if publishing.
-const API_KEYS = {
-    GOOGLE_SAFE_BROWSING: 'AIzaSyDOhdQgGGImNdHbLKYU1G1EdAbpcaY7Ses', // Add your Google Safe Browsing API Key here
-    MISTRAL: '0Rj3P23c6Uleb4Zr7DYfUU4iNUHfD3hb' // Add your Mistral API Key here
-};
+const GOOGLE_API_KEY = API_KEYS.GOOGLE_SAFE_BROWSING;
+const MISTRAL_API_KEY = API_KEYS.MISTRAL;
 
 const analysisCache = {}; // Cache for URL analysis results
 
